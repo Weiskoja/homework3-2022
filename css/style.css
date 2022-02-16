@@ -86,7 +86,6 @@ a.skip{
   padding: 6px;
   -webkit-transition: top 1s ease-out;
   transition: left 1s ease-out;
-  z-index: 1;
   /* Requirement 3 code here*/
   position: relative;
   left: -500px;
@@ -110,7 +109,7 @@ nav a:focus{
 /* Requirements 6-10 here: */
 
 .intro{
-  background-image: url("/images/header.jpg") #DDDDDD;
+  background-image:  url("/images/header.jpg"), #B3B3B3 ;
   min-height: 400px;
   background-attachment: fixed;
   background-position: center;
@@ -122,7 +121,7 @@ nav a:focus{
 .clients, 
 .method, 
 .contact{
-  grid-column: 2/3;
+  grid-column: 2/span 1;
   z-index: 1;
 }
 
@@ -133,22 +132,22 @@ img{
 .clients-image, 
 .method-image, 
 .contact-image {
-  grid-column: 1/4;
+  grid-column: 1/span 3;
   max-height: 500px;
   overflow: hidden;
 }
 .about, .about-image{
-  grid-row: 1/2;
+  grid-row: 1/span 1;
 }
 .clients, .clients-image{
-  grid-row: 2/3;
+  grid-row: 2/span 1;
 }
 .method, .method-image{
-  grid-row: 3/4;
+  grid-row: 3/span 1;
 }
 
 .contact,.contact-image{
-  grid-row: 4/5;
+  grid-row: 4/span 1;
 }
 
 .text{
@@ -181,23 +180,23 @@ img{
   }
 
 
-  .container{
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows:repeat(4,300px) ;
-  }
-  .about, 
-  .method, 
-  .clients-image, 
-  .contact-image {
-    grid-column: 3/6;
-  }
+.container{
+  grid-template-columns: 50px auto 500px auto 50px;
+  grid-template-rows:repeat(4,300px) ;
+}
+.about, 
+.method, 
+.clients-image, 
+.contact-image {
+  grid-column: 3/span 2;
+}
 
-  .clients,
-  .contact,
-  .about-image,
-  .method-image{
-    grid-column: 2/5;
-  }
+.clients,
+.contact,
+.about-image,
+.method-image{
+  grid-column: 2/span 2;
+}
 }
 
 /** Code for prefers reduced motion **/
